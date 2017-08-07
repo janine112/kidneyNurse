@@ -1,0 +1,38 @@
+<ion-view cache-view="false" title="患者详情" show-tabs>
+    <ion-nav-buttons side="left" ng-click="GoBack()">
+    </ion-nav-buttons>
+    
+    <ion-content>
+     <div class="card">
+        <div class="me-top-box">
+            <div class="me-top-bg"></div>
+                <div class="me-massage-box">
+                    <div class="me-avatar-box" >
+                        <div class="img-cen me-avatar">
+                            <img ng-src="{{patient.photoUrl || 'img/DefaultAvatar.jpg'}}">
+                        </div>
+                        <div class="f16" style="margin-top:88px">{{patient.name}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="list">
+            <a class="item item-icon-left item-icon-right">姓名：{{patient.name}}</a>
+            <a class="item item-icon-left item-icon-right">性别：{{{1:"男",2:"女",undefined:"未填写"}[patient.gender] }}</a>
+            <a class="item item-icon-left item-icon-right">肾病类型：{{{"class_1":"肾移植","class_2":"ckd1-2期","class_3":"ckd3-4期","class_4":"ckd5期未透析","class_5":"血透","class_6":"腹透"}[patient.class]  ||  "无"}}</a>
+            <a class="item item-icon-left item-icon-right">出生日期：{{patient.birthday.substring(0,10) || "无"}}</a>
+            <a class="item item-icon-left item-icon-right">身高：{{patient.height || "无"}}</a>
+            </div>
+     </div>
+        <div>
+            <button ng-click="SendInsMsg()" style="height: 10px" class="button button-full button-stable"><i class="icon ion-android-send"></i>推送保险</button>
+        </div>
+    </div>
+
+  </ion-content>
+
+</ion-view>
+
+
+
+ 
+

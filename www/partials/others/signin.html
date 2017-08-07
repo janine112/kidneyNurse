@@ -1,0 +1,25 @@
+<ion-view title="登录">
+  <ion-nav-bar class="bar-positive bar-calm" style="background: #6ac4f8" align-title="center" >
+     
+  </ion-nav-bar>
+  <div  style="position: absolute;top: 43px;z-index:100;display: block;height: 2px;background-color: #6ac4f8;{{barwidth}}" ></div>
+  <ion-content padding="true"  style=" padding-left:10%;padding-right:10%;background : #ffffff;">
+          <div class="list list-inset mt-40" style="margin-bottom:0">
+            <label class="item item-input" style="border:1px solid #6ac4f8;border-radius: 5px">
+              <span class="input" style="margin-right:16px"><i class="icon ion-iphone"></i></span>
+              <input type="tel"  ng-model="logOn.username" placeholder="手机号" >
+            </label>
+            <label class="item item-input" style="margin-top: 10px;border:1px solid #6ac4f8;border-radius: 5px">
+              <span class="input" style="margin-right:16px"><i class="icon ion-ios-locked-outline"></i></span>
+              <input type="password" ng-model="logOn.password" placeholder="密 码" >
+            </label>
+          </div>
+          <div class="row" style="padding:0" >
+            <div class="col col-40"><p style="color:red;font-size: 10px">{{logStatus}}</p></div>
+            <div class="col "><p style="color:#7a7a7a;text-align:right" ng-click="toReset()">忘记密码?</p></div>
+          </div>
+
+          <button style="margin-top:0; background: #6ac4f8" class="button button-block button-positive login_btn" ng-click="signIn(logOn)">立即登录</button>
+          <button style="margin-top:0" class="button button-block button-positive login_btn" ng-click="bindwechat()">绑定微信</button>
+  </ion-content>     
+</ion-view>

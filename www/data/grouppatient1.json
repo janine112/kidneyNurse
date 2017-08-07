@@ -1,0 +1,22 @@
+[
+	{
+		"No": 1,
+		"patientID": "GroupPatient1",
+		"name": "张国安",
+		"gender": "男",
+		"age": 56,
+		"photoAdd": "img/default_user.png",
+		"lasttime": "2017/3/11 09:32",
+		"question": "肾病问题1"
+	},
+	{
+		"No": 2,
+		"patientID": "GroupPatient2",
+		"name": "李爱国",
+		"gender": "男",
+		"age": 53,
+		"photoAdd": "img/default_user.png",
+		"lasttime": "2017/3/10 15:32",
+		"question": "肾病问题2"
+	}
+]

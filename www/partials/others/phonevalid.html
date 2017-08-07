@@ -1,0 +1,34 @@
+<ion-view title="手机号验证">
+  <ion-nav-bar class="bar-positive " align-title="center">
+    <ion-nav-buttons side="left">
+      <button class="button button-icon icon ion-ios-arrow-left fc-ff" ng-click="$ionicGoBack()"></button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content padding="true"  style="" >
+
+        <!-- <div class="row" text-center" style="min-height:100px"> -->
+            
+        <!-- </div> -->
+        <div class="list list-inset" style="margin-bottom:0">
+            <label class="item item-input"  style="border-radius: 5px;border: 1px solid #6ac4f8">
+              <span class="input" style="margin-right:16px"><i class="icon ion-android-phone-portrait"></i></span>
+              <input type="tel"  ng-model="Verify.Phone" placeholder="手机号" >
+            </label>
+            <label class="item item-input" style="margin-top: 10px;border-radius: 5px;border: 1px solid #6ac4f8" >
+              <span class="input" style="margin-right:16px"><i class="icon ion-ios-locked-outline"></i></span>
+              <input type="password" ng-model="Verify.Code" placeholder="验证码" >
+            </label>
+        </div>
+          <div class="col col-75"><p style="color:#FF0000">{{logStatus}}</p></div>
+
+
+          <button  style="margin-top:0;background: #6ac4f8" class="button button-block button-positive" ng-disabled="isable"  ng-click = "getcode(Verify)">
+            {{veritext}}
+          </button>
+          <button  style="margin-top:0;background: #6ac4f8" class="button button-block button-positive" ng-click ="gotoReset(Verify)">
+            下一步
+          </button>
+        </div>
+     
+  </ion-content>
+</ion-view>

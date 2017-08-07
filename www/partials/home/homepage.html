@@ -1,0 +1,25 @@
+<ion-view view-title='我的患者'>
+<ion-nav-bar class="bar-positive bar-calm" style="background: #6ac4f8" align-title="center" >
+  </ion-nav-bar>
+    <ion-content>
+    <div style="line-height: 30px;text-align: center;">
+          您可以使用微信“扫一扫”功能绑定患者！
+    </div>
+
+    <div class="card" ng-if="hasPatients" ng-repeat="patient in patients" style="margin-top: 0px">
+        <div class="item item-avatar" ng-click="getPatientInfo(patient.patientId.userId)">
+             <img style="border-radius: 100%;top: 40%;margin-top: -10px" ng-src="{{patient.patientId.photoUrl  || 'img/DefaultAvatar.jpg'}}">
+                <h2>姓名：{{patient.patientId.name}}</h2> 
+                <p>性别：{{{1:"男",2:"女",undefined:"未填写"}[patient.patientId.gender] }}<span style="margin-left: 40px">肾病类型：{{{"class_1":"肾移植","class_2":"ckd1-2期","class_3":"ckd3-4期","class_4":"ckd5期未透析","class_5":"血透","class_6":"腹透"}[patient.patientId.class]  ||  "无"}}</span></p> 
+                <p style="font-size: 12px">出生日期：{{patient.patientId.birthday.substring(0,10) || "无"}}<span style="margin-left: 20px">绑定日期：{{patient.dpRelationTime.substring(0,10)}}</p> 
+        </div>
+    </div>
+    <div ng-if="!hasPatients" style="line-height: 30px;text-align: center;">
+                你目前还没有绑定的患者！
+    </div> 
+
+    </ion-content> 
+</ion-view>
+
+
+  
